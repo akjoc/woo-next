@@ -1,18 +1,20 @@
 import Layout from "../components/Layout";
 import clientConfig from "../client-config";
 import fetch from 'isomorphic-unfetch';
-import Product from "../components/Products";
+import Product from "../components/Product";
 
 const Index = ( props ) => {
 
   const {products} = props;
   return (
     <Layout>
-        {
-          products.length ? (
-            products.map( (product) => <Product key={product.id} product = { product }/>)
-          ) : ''
-        }
+        <div className="row product-container">
+          {
+            products.length ? (
+              products.map( (product) => <Product key={product.id} product = { product }/>)
+            ) : ''
+          }
+        </div>
     </Layout>
   )
 };

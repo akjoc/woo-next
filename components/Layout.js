@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Header from "./Header";
+// Import CSS directly in your component or page
+
 
 const Layout = (props) => {
   return (
@@ -12,7 +14,12 @@ const Layout = (props) => {
         />
       </Head>
       <Header />
-      {props.children}
+      <div className="product_section">
+        <div className="container">
+          {props.children}
+        </div>
+      </div>
+      
     </div>
   );
 };
